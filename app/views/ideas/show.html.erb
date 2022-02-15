@@ -1,9 +1,11 @@
 <p style="color: green"><%= notice %></p>
 
+<%= image_tag(@idea.picture_url, width: 600) if @idea.picture.present? %>
+
 <%= render @idea %>
 
 <div>
-  <%= image_tag(@idea.picture_url, width: 600) if @idea.picture.present? %>
+  
   <%= link_to "Edit this idea", edit_idea_path(@idea) %> |
   <%= link_to "Back to ideas", ideas_path %>
 
